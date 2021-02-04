@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+body{
+    /* e9f8ff */
+    background-color: #e9f8ff;
+}
+/* header 부분 */
+header{
+    border-bottom: 2px solid #09005c;
+}
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 12px;
+}
+.header-bar-logo img{
+    width: 200px;
+}
+.search-main{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.search-main input{
+    width: 500px;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    border: 2px solid #09005c;
+}
+.btn-search{
+    width: 50px;
+    height: 30px;
+    border: 2px solid #09005c;
+    background-color: #09005c;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.search{
+    width: 200px;
+}
+.header-bar-icons{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-weight: bolder;
+}
+.header-bar-icons a:hover{
+    color: #1c02ff;
+}
+.header-bar-icons li{
+    padding: 8px 12px;
+}
+.header-toogleBtn{
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #09005c;
+    display: none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.panel-question{
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.panel-heading{
+    font-weight: bold;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.panel-body{
+    padding: 15px;
+}
+#btn{
+    margin-bottom: 10px;
+    background-color: #999;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    float: right;
+    position: relative;
+    left: 50px;
+}

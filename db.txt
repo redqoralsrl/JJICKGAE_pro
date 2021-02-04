@@ -1,0 +1,83 @@
+이름 name
+아이디 id
+닉네임 nickname
+이메일 email
+비밀번호 pw
+비밀2차 password2
+
+//
+admin 1234
+//
+
+// redqoralsrl
+1) create database redqoralsrl;
+
+2) use redqoralsrl;
+/* id(primary key) - pw - nickname - board_free */
+
+3) 계정정보
+
+아이디, 이름, 비번, 닉네임, 이메일
+create table userdata(
+id varchar(30) not null primary key,
+name varchar(20) not null,
+pw varchar(50) not null,
+nickname varchar(20) not null,
+email varchar(50) not null
+);
+
+4) 첫인사게시판 테이블
+
+일련번호, 아이디, 닉네임, 글내용, 작성일및시간
+create table board_free(
+num int not null auto_increment primary key,
+id varchar(30) not null,
+name varchar(10) not null,
+nickname varchar(20) not null,
+content text not null,
+regist_day char(20)
+);
+
+5) 첫인사게시판 댓글 테이블
+
+일련번호, 메인글의일련번호, 아이디, 닉네임, 글내용, 작성일및시간
+create table board_free_ripple(
+num int not null auto_increment primary key,
+parent int not null,
+id varchar(30) not null,
+nickname varchar(20) not null,
+content text not null,
+regist_day char(20)
+);
+
+6) 자유게시판
+
+일련번호, 아이디, 이름, 닉네임, 제목, 글내용, 작성일, 조회수, HTML쓰기, 첨부파일1, 첨부파일2
+create table free(
+num int not null auto_increment primary key,
+id varchar(30) not null,
+name varchar(10) not null,
+nickname varchar(20) not null,
+subject varchar(100) not null,
+content text not null,
+regist_day char(20),
+hit int,
+is_html char(1),
+file_name_0 varchar(40),
+file_name_1 varchar(40),
+file_copied_0 varchar(30),
+file_copied_1 varchar(30)
+);
+
+7) 자유게시판 댓글
+
+일련번호, 메인글의일련번호, 아이디, 닉네임, 글내용, 작성일및시간
+create table free_ripple(
+num int not null auto_increment primary key,
+parent int not null,
+id varchar(30) not null,
+name varchar(10) not null,
+nickname varchar(20) not null,
+content text not null,
+regist_day char(20)
+);
