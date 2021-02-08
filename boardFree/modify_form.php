@@ -44,9 +44,11 @@
         <div class="header-bar-logo">
             <a href="../index_result.php"><img src="../images/logo.png"></a>
         </div>
+        <form name="forms" method="post" action="../search_html.php">
         <ul class="search-main">
-            <li><input class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
+            <li><input name="search" class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
         </ul>
+        </form>
         <ul class="header-bar-icons">
             <li><a href="../boarduser/boarduser.php" class="login">마이페이지</a></li>
             <li><a href="../login_register/login_out.php" class="register">로그아웃</a></li>    
@@ -61,49 +63,43 @@
             <div class="menu-list-board">
                 <ul class="menu-links">
                     <li><a href="../boardFree/list.php?page=1">자유게시판</a></li>
-                    <li><a href="../boardpicture/picturelist.php?page=1">익명게시판</a></li>
-                    <li><a href="#">신문고게시판</a></li>
-                    <li><a href="../board/board_free.php?page=1">투데이 게시판</a></li>
-                    <li><a href="../boarduser/boarduser.php">나의정보</a></li>
+                    <li><a href="../boardpicture/picturelist.php?page=1">사진게시판</a></li>
+                    <li><a href="../boardmarket/marketlist.php?page=1">장터게시판</a></li>
+                    <li><a href="../board/board_free.php?page=1">첫인사게시판</a></li>
+                    <li><a href="../boarduser/boarduser.php">정보수정</a></li>
                     <li><a href="../htmls/faq.php">고객센터</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    
-
-    <div class="section_bodys">
-        <div id="content">
-            <div class="col2">
-                <div class="title">자유게시판</div>
-                <div   div class="write_form_title">수정하기</div>
-                <form name="board_form" method="post" action="../boardFree/insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>">
-                    <div class="write_form">
-                <!-- <div class="write_line"></div> -->
-                        <div class="write_row1">
-                            <div class="col1"></div>
-                            <div class="col2"><?=$_SESSION['nickname']?></div>
-                            <div class="col3">
-                            <input type="checkbox" name="html_ok" value="y">HTML쓰기
-                        </div>
-                    </div>    
-                        <div class="write_line"></div>
-                        <div class="write_row2">
-                            <div class="col4"></div>
-                            <div class="col5">
-                                <textarea name="content" cols="80" rows="15" required><?=$item_content?></textarea>
-                            </div>
-                        </div><!--write_row3-->
-                        <div class="write_line"></div>
-                    </div><!--write_row1-->
-                    <div class="write_button">
-                        <input type="submit" value="수정">&nbsp;
-                        <a href="../boardFree/list.php?page=<?=$page?>">목록</a>
-                    </div>
-            </div>
-        </div>    
+    <div class="col2">
+        <div class="title">자유게시판</div>
     </div>
-        </form>
+    <div class="write_form_title">수정하기</div>
+    <form name="board_form" method="post" action="../boardFree/insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>">
+            <div class="write_form">
+                <div class="write_line"></div>
+                <div class="write_row1">
+                    <div class="col1"></div>
+                    <div class="col2"><?=$_SESSION['nickname']?></div>
+                    <div class="col3">
+                        <input type="checkbox" name="html_ok" value="y">HTML쓰기
+                    </div>
+                    <div class="write_line"></div>
+                    <div class="write_row3">
+                        <div class="col1"></div>
+                        <div class="col2">
+                            <textarea name="content" cols="80" rows="15" required><?=$item_content?></textarea>
+                        </div>
+                    </div><!--write_row3-->
+                    <div class="write_line"></div>
+                </div><!--write_row1-->
+                <div class="write_button">
+                    <input type="submit" value="수정">&nbsp;
+                    <a href="../boardFree/list.php?page=<?=$page?>">목록</a>
+                </div>
+            </div>
+    </form>
 </body>
 </html>
 <?php
