@@ -30,9 +30,11 @@
         <div class="header-bar-logo">
             <a href="../index_result.php"><img src="../images/logo.png"></a>
         </div>
+        <form name="forms" method="post" action="../search_html.php">
         <ul class="search-main">
-            <li><input class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
+            <li><input name="search" class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
         </ul>
+        </form>
         <ul class="header-bar-icons">
             <li><a href="../boarduser/boarduser.php" class="login">마이페이지</a></li>
             <li><a href="../login_register/login_out.php" class="register">로그아웃</a></li>    
@@ -47,8 +49,8 @@
             <div class="menu-list-board">
                 <ul class="menu-links">
                     <li><a href="../boardFree/list.php?page=1">자유게시판</a></li>
-                    <li><a href="#">익명게시판</a></li>
-                    <li><a href="#">신문고게시판</a></li>
+                    <li><a href="../boardpicture/picturelist.php?page=1">사진게시판</a></li>
+                    <li><a href="../boardmarket/marketlist.php?page=1">장터게시판</a></li>
                     <li><a href="../board/board_free.php?page=1">투데이 게시판</a></li>
                     <li><a href="../boarduser/boarduser.php">나의정보</a></li>
                     <li><a href="../htmls/faq.php">고객센터</a></li>
@@ -91,17 +93,19 @@
         ?>
     <div class="title_list_look">
         <div class="container_body">
+        <div class="title">사진게시판</div>
+            <div class="wirte_line"></div>
             <ul>
                 <li class="list1">글번호</li>
-                <li class="list2">아이디</li>
-                <li class="list3">닉네임</li>
+                <li class="list3">작성자</li>
                 <li class="list4">제목</li>
-                <li class="list5">내용</li>
                 <li class="list6">이미지</li>
                 <li class="list7">날짜</li>
             </ul>
         
         <?php
+        $i = $count;
+
         while($row = mysqli_fetch_array($result)){
             $img_num = $row['num'];
             $img_id = $row['id'];
@@ -110,26 +114,35 @@
             $img_subject = str_replace(" ", "&nbsp;", $row["subject"]);
             $img_content = $row['content'];
             $img_date = $row['regist_day'];
+            $img_date=substr($img_date, 0, 10);
             $img_file = $row['file_path'];
             ?>
             <div class="bodys">
                 <div class="bodys_bod">
                     <div class="insta">
-                        <div class="num_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$img_num?></a></div>
-                        <div class="id_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$img_id?></a></div>
+                        <div class="num_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$i?></a></div>
                         <div class="nickname_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$img_nickname?></a></div>
                         <div class="subject_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$img_subject?></a></div>
-                        <div class="content_insta"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><?=$img_content?></a></div>
                         <div class="img_ins"><a href="../boardpicture/pictureview.php?num=<?=$img_num?>&page=<?=$page?>"><img src="<?=$img_file?>"></a></div>
                         <div class="day_insta"><?=$img_date?></div>
                     </div><!--insta-->
                 </div><!--bodys_bod-->
             </div><!--bodys-->
         <?php
-
+            $i--;
             $cot--;
         }
     ?>
+            <div class="write_button">
+                    <a href="../boardpicture/picturelist.php?page=<?=$page?>">목록</a>&nbsp;
+                    <?php
+                        if(isset($_SESSION['id'])){
+                    ?>
+                    <a href="../boardpicture/picture.php?page=<?=$page?>">글쓰기</a>
+                    <?php
+                        }
+                    ?>
+            </div><!-- write_button -->
         </div><!--container_body-->
     </div><!--title_list_look-->
         <?php

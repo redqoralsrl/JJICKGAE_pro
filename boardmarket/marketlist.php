@@ -10,6 +10,14 @@
 <?php
     }
 
+    if(isset($_REQUEST['mode'])) $mode = $_REQUEST['mode'];
+    else  $mode = "";
+
+    if(isset($_REQUEST['search'])){
+        $search = $_REQUEST['search'];
+    }else{
+        $search = "";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -63,7 +71,7 @@
 
         // 페이지
         $page_sql = "
-            select * from greet
+            select * from market
         ";
 
         $page = $_GET['page'];
@@ -79,9 +87,6 @@
         $start = ($page-1)*$view_article; // 현재 페이지 시점에서 시작점을 지정해준다
 
         $cot = 1; // 반복문에 $cot ++; 넣어준다.
-
-        if(isset($_REQUEST['mode'])) $mode = $_REQUEST['mode'];
-        else  $mode = "";
 
         if(isset($_REQUEST['search'])){
             $search = $_REQUEST['search'];
@@ -101,11 +106,11 @@
                 </script>
                 <?php
             }
-            $sql = "select * from greet where $find like '%$search%' order by num desc
+            $sql = "select * from market where $find like '%$search%' order by num desc
                     limit $start, $view_article";
         }else{
             $sql = "
-            select * from greet
+            select * from market
             order by num desc
             limit $start, $view_article
         ";
@@ -119,9 +124,9 @@
     ?>
     <div class="section_bodys">
         <div class="col2">
-            <div class="title">자유게시판</div>
+            <div class="title">장터게시판</div>
             <div class="write_line"></div>
-            <form name="board_form" method="post" action="../boardFree/list.php?mode=search&page=<?=$page?>">
+            <form name="board_form" method="post" action="../boardmarket/marketlist.php?mode=search&page=<?=$page?>">
                 <div class="list_search">
                     <div class="list_search1">▷ 총 <?= $count ?> 개의 게시물이 있습니다.</div>
                     <div class="list_search1_1">
@@ -130,7 +135,7 @@
                             <select name="find">
                                 <option value='subject'>제목</option>
                                 <option value='content'>내용</option>
-                                <option value='nickname'>닉네임</option>
+                                <option value='nickname'>작성자</option>
                                 <option value='name'>이름</option>
                             </select>
                         </div> <!-- end of list_search3 -->
@@ -146,7 +151,7 @@
                     <li class="list_title2">제목</li>
                     <li class="list_title3">작성자</li>
                     <li class="list_title4">등록일</li>
-                    <li class="list_title5">조회</li>
+                    <li class="list_title5">사진</li>
                 </ul>
             </div><!--list_top_title-->
             <div class="list_content">
@@ -159,39 +164,39 @@
                         $item_id=$row["id"];
                         $item_name=$row["name"];
                         $item_nick=$row["nickname"];
-                        $item_hit=$row["hit"];
                         $item_date=$row["regist_day"];
                         $item_date=substr($item_date, 0, 10);
                         $item_subject=str_replace(" ", "&nbsp;", $row["subject"]);
+                        $item_file = $row['file_path'];
 
-                        $sql = "select * from greet_ripple where parent=$item_num";
+                        $sql = "select * from market_ripple where parent=$item_num";
                         $result1 = mysqli_query($conn, $sql);
                         $num_ripple = mysqli_num_rows($result1);
                 ?>
                     <div id="list_item">
                         <ul>
                             <li id="list_item1"><?= $i ?></li>
-                            <li id="list_item2"><a href="view.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a>
+                            <li id="list_item2"><a href="../boardmarket/marketview.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a>
                             <?php
                                 if($num_ripple) print "[<font color=red><b>$num_ripple</b></font>]";
                             ?></li>
-                            <li id="list_item3"><a href="view.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_nick ?></a></li>
-                            <li id="list_item4"><a href="view.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_date ?></a></li>
-                            <li id="list_item5"><?= $item_hit ?></li>
+                            <li id="list_item3"><a href="../boardmarket/marketview.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_nick ?></a></li>
+                            <li id="list_item4"><a href="../boardmarket/marketview.php?num=<?=$item_num?>&page=<?=$page?>"><?= $item_date ?></a></li>
+                            <li id="list_item5"><a href="../boardmarket/marketview.php?num=<?=$item_num?>&page=<?=$page?>"><img src="<?=$item_file?>"></a></li>
                         </ul>
                     </div><!--list_item-->
                     <?php
                         $i--;
                         $cot--;
                     } // while
-                    include('board_page.php');
+                    include('./marketpage.php');
                 ?>
                 <div class="write_button">
-                    <a href="../boardFree/list.php?page=<?=$page?>">목록</a>&nbsp;
+                    <a href="../boardmarket/marketlist.php?page=<?=$page?>">목록</a>&nbsp;
                     <?php
                         if(isset($_SESSION['id'])){
                     ?>
-                    <a href="../boardFree/write_form.php?page=<?=$page?>">글쓰기</a>
+                    <a href="../boardmarket/marketwrite.php?page=<?=$page?>">글쓰기</a>
                     <?php
                         }
                     ?>

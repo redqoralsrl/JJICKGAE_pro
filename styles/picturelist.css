@@ -8,7 +8,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #f4f5f6;;
 }
 /* header 부분 */
 header{
@@ -78,6 +78,7 @@ button{
     width: 100%;
     background-color: #ffffff;
     border-bottom: 2px solid #09005c;
+   
 }
 .nav-board{
     padding-top: 5px;
@@ -99,13 +100,122 @@ button{
 }
 /* body */
 .bodys{
-    width: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
 }
 .bodys_bod{
     width: 1000px;
     margin: 0 auto;
     background-color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
 }
+.title{
+    padding-top: 20px;
+}
+.title_list_look{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px; 
+    background-color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
+    
+    
+}
+.contanier_body{
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.list{
+    width: 100%;
+    display: inline-block;
+    
+}
+.list li{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.img_ins img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+li{
+    list-style: none;
+}
+.list_top_title ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+.list1{
+    width: 15%;
+}
+.list2{
+    width: 15%;
+}
+.list3{
+    width: 15%;
+}
+.list4{
+    width: 25%;
+}
+.list5{
+    width: 30%;
+}
+
+
+.insta{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    width: 100%;
+}
+.num_insta{
+    width: 15%;
+}
+.nickname_insta{
+    width: 15%;
+}
+.subject_insta{
+    width: 15%;
+}
+.img_ins{
+    width: 25%;
+}
+.day_insta{
+    width: 30%;
+}
+
+.write_line{
+    width: 100%;
+    border: 1px solid #5c5c5c;
+}
+.write_button{
+    width: 100%;
+    text-align: right;
+}
+.write_button a{
+    background-color: #5c5c5c;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 1024px){
     /* header 부분 */

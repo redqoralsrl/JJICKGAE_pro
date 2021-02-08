@@ -8,7 +8,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #f4f5f6;;
+    background-color: #f4f5f6;
 }
 /* header 부분 */
 header{
@@ -195,114 +195,59 @@ nav{
     color: #5c5c5c;
     text-shadow: 1px 1px #5c5c5c;
 }
-.section_bodys{
-    width: 1000px;
-    margin: 0 auto;
-    margin-top: 40px;   
-    font-weight: bolder;
-    font-size: 15px;
+
+
+.bodys{
+    width: 100%;
+    padding-top: 30px;
+
 }
-.col2{
+.write_line{
+    width: 100%;
+    border: 1px solid #5c5c5c;
+}
+.bodys_inside{
     margin: 0 auto;
-    border-radius: 20px;
+    padding: 20px;
     width: 80%;
     background-color: #ffffff;
     font-weight: bolder;
     font-size: 15px;
-    box-shadow: 3px 3px 3px #000000;
 }
-.title{
-    border-radius: 20px 20px 0 0;
+.body_sub{
     width: 100%;
-    font-size: 15px;
-    text-align: center;
-    
+    background-color: #ffffff;
     color: #000000;
-}
-.write_form{
-    width: 100%;
-    text-align: center;
-}
-.write_row1{
-    width: 100%;
-    display: flex;
-    justify-content: start;
-}
-
-.write_line{
-    width: 798px;
-    border: 1px solid #5c5c5c;
-}
-.write_row2{
-    display: flex;
-    justify-content: start;
-    width: 32px;
-    
-    text-align: center;
-}
-.col1s{
-    width: 10%;
-    
-    color: #000000;
-}
-.col2s{
-    width: 90%;
-}
-
-
-
-.write_row3{
-    width: 100%;
-    height: 230px;
-    display: flex;
-    justify-content: start;
-    text-align: center;
-}
-.col3s{
-    width: 10%;
-    height: 100%;
-    color: #000000;
-}
-
-.write_button{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-.write_button input{
-    font-size: 14px;
     font-weight: bolder;
-    border: 0;
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-    border: 1px solid #5c5c5c;
-    color: #000000;
-    margin-top: 1px;
-    margin-right: 8px;
-    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px 10px 0 0;
 }
-.write_button input:hover{
-    background-color: #FFEBF0;
+.img_content,
+.regists{
+  position: relative;
+  left: 80%;
+  display: inline-block;
 }
-.write_button a{
-    font-size: 14px;
-    text-align: center;
-    border: 0;
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-    color: #000000;
-    margin-top: 1px;
-    margin-right: 8px;
-    border: 1px solid #5c5c5c;
+
+.img_srcs img{
+    width: 1200px;
+    height: 1200px;
+    object-fit: cover;
 }
-.write_button a:hover{
-    background-color: #FFEBF0;
+
+
+.img_srcs{
+    padding-top: 40px;
 }
-.col5 textarea{
-    width: 800px;
-    font-weight: 9px;
+.button_lists{
+    font-size: 15px;
+    font-weight: bolder;
+    width: 100%;
+    list-style: none;
+  
+}
+.button_lists li{
+    display: inline-block;
     
-    position: relative;
+    
 }

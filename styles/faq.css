@@ -9,7 +9,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #f4f5f6;;
 }
 /* header 부분 */
 header{
@@ -70,7 +70,7 @@ header{
     color: #09005c;
     display: none;
 }
-button{
+.btn-search{
     position: relative;
     top: 3.5px;
 }
@@ -126,4 +126,17 @@ button{
     float: right;
     position: relative;
     left: 50px;
+}
+#btn-collapse{
+    position: relative;
+    float: right;
+    border: solid 1px #000000;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+   
+
 }

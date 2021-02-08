@@ -3,7 +3,7 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['id']) && 'admin' != $_SESSION['id']){
+    if(!isset($_SESSION['id']) && $_SESSION['id'] != 'admin'){
         ?>
         <script>
             alert("Get Away!");

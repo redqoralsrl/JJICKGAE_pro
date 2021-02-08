@@ -25,7 +25,7 @@
     $nickname = $_SESSION['nickname'];
 
     $sql = "
-        insert into greet_ripple(parent, id, nickname, content, regist_day)
+        insert into market_ripple(parent, id, nickname, content, regist_day)
         value('$num','$id','$nickname','$content',now())
     ";
 
@@ -34,5 +34,5 @@
     // header("Location: ../boardFree/view.php?page=$page&num=$num")
 ?>
 <script>
-    location.replace('../boardFree/list.php?num=<?=$num?>&page=<?=$page?>');
+    location.replace('../boardmarket/marketlist.php?num=<?=$num?>&page=<?=$page?>');
 </script>

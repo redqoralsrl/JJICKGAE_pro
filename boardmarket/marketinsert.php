@@ -28,11 +28,11 @@
 
 
     
-    $sql = "insert into picture(id, name, nickname, subject, content, regist_day, file_path)
+    $sql = "insert into market(id, name, nickname, subject, content, regist_day, file_path)
             value('$id','$name','$nickname','$subject','$content',now(), '$file_path')";
 
     $result = mysqli_query($conn,$sql);
 ?>
 <script>
-    location.replace('../boardpicture/picturelist.php?page=<?=$page?>');
+    location.replace('../boardmarket/marketlist.php?page=<?=$page?>');
 </script>

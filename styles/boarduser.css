@@ -8,7 +8,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #DDDDFF;
+    background-color: #f4f5f6;
 }
 /* header 부분 */
 header{
@@ -236,7 +236,8 @@ nav{
     border : 1px solid #5c5c5c;
     box-shadow: 3px 3px 3px #5c5c5c;
     width: 90%;
-    height: 20px;
+    height: 25px;
+    border-radius: 3px;
 }
 .submit-form{
     width: 80%;
@@ -246,16 +247,17 @@ nav{
     padding-bottom: 15px;
 }
 .submit-form input{
-    border: 0;
+    border: 0.1;
     width: 100px;
     height: 40px;
     font-size: 15px;
     color: #000000;
     font-weight: bolder;
-    background-color: #8FCEFF;
+    background-color: #f4f5f6;
     cursor: pointer;
     margin-bottom: 10px;
     border-radius: 20px;
+    
     
 }
 @media screen and (max-width: 1024px){

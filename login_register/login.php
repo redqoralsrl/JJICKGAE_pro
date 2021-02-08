@@ -21,10 +21,10 @@
             <section class="login-input-section">
                 <form action="../login_register/login_check.php" method="POST">
                     <div class="login-email">
-                            <input type="text" name="id" class="e-mail" placeholder="아이디"></input>
+                            <input type="text" name="id" class="e-mail" placeholder="아이디" required>
                     </div>
                     <div class="login-password">
-                            <input type="password" name="pw" class="psw" placeholder="비밀번호"></input>
+                            <input type="password" name="pw" class="psw" placeholder="비밀번호" required>
                     </div>
                     <div class="btn-login">
                         <button class="sign"><strong>로그인</strong></button>

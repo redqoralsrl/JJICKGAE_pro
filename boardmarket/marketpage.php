@@ -5,7 +5,7 @@
             <?php
 
                 $page = $_GET['page'];
-                if(!$page) $page=1; 
+
 
                 $total_page = ceil($total_article / $view_article);
 
@@ -29,23 +29,23 @@
                 if($next_group > $total_page) $next_group = $total_page;
 
                 // 처음 페이지
-                if($page != 1) echo "<a href=../board/board_free.php?page=1>First</a> &nbsp; &nbsp;";
+                if($page != 1) echo "<a href=../boardmarket/marketlist.php?page=1>First</a> &nbsp; &nbsp;";
                 else "First &nbsp; &nbsp;";
 
                 // 이전 그룹 이동
-                if($page != 1) echo "<a href=../board/board_free.php?page=$prev_group>◀</a> &nbsp; &nbsp;";
+                if($page != 1) echo "<a href=../boardmarket/marketlist.php?page=$prev_group>◀</a> &nbsp; &nbsp;";
 
                 for($i = $start_page; $i < $end_page; $i++){
                     if($i > $total_page) break;
                     if($i == $page) echo "$i &nbsp; &nbsp;";
-                    else echo "<a href=../board/board_free.php?page=$i>$i</a> &nbsp;";
+                    else echo "<a href=../boardmarket/marketlist.php?page=$i>$i</a> &nbsp;";
                 }
                 
                 // 다음 그룹 이동
-                if($page < ($total_page + $page - $end_page)) echo "&nbsp; &nbsp; <a href=../board/board_free.php?page=$next_group>▶</a>";
+                if($page < ($total_page + $page - $end_page)) echo "&nbsp; &nbsp; <a href=../boardmarket/marketlist.php?page=$next_group>▶</a>";
 
                 // 마지막 페이지
-                if($page != $total_page) echo "&nbsp; &nbsp; <a href=../board/board_free.php?page=$total_page>Last</a>";
+                if($page != $total_page) echo "&nbsp; &nbsp; <a href=../boardmarket/marketlist.php?page=$total_page>Last</a>";
                 else echo " &nbsp; &nbsp; Last";
             ?>
             

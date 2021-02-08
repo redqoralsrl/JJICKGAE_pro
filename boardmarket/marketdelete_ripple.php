@@ -4,7 +4,7 @@
 
     include '../sql_function.php';
     $sql = "
-        delete from board_free_ripple where num='$ripple_num'
+        delete from market_ripple where num='$ripple_num'
     ";
 
     $page = $_GET['page'];
@@ -14,5 +14,5 @@
     // header("Location: ../boardFree/view.php?page=$page");
 ?>
 <script>
-    location.replace('../boardFree/list.php?page=<?=$page?>');
+    location.replace('../boardmarket/marketlist.php?page=<?=$page?>');
 </script>

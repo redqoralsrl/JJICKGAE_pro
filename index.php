@@ -25,9 +25,11 @@
         <div class="header-bar-logo">
             <a href="./index.php"><img src="./images/logo.png"></a>
         </div>
-        <ul class="search-main">
-            <li><input class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
-        </ul>
+        <form name="forms" method="post" action="./search_html.php">
+            <ul class="search-main">
+                <li><input name="search" class="search" type="text" placeholder="검색어 입력"><button class="btn-search"><strong>검색</strong></button></li>
+            </ul>
+        </form>
         <ul class="header-bar-icons">
             <li><a href="./login_register/login.php" class="login">로그인</a></li>
             <li><a href="./login_register/register.html" class="register">회원가입</a></li>    
@@ -40,10 +42,10 @@
             <div class="menu-list-board">
                 <ul class="menu-links">
                     <li><a href="./boardFree/list.php?page=1">자유게시판</a></li>
-                    <li><a href="./boardpicture/picturelist.php?page=1">익명게시판</a></li>
-                    <li><a href="#">신문고 게시판</a></li>
-                    <li><a href="./board/board_free.php?page=1">투데이 게시판</a></li>
-                    <li><a href="./boarduser/boarduser.php">내 정보수정</a></li>
+                    <li><a href="./boardpicture/picturelist.php?page=1">사진게시판</a></li>
+                    <li><a href="./boardmarket/marketlist.php?page=1">장터게시판</a></li>
+                    <li><a href="./board/board_free.php?page=1">첫인사게시판</a></li>
+                    <li><a href="./boarduser/boarduser.php">정보수정</a></li>
                     <li><a href="./htmls/faq.php">고객센터</a></li>
                 </ul>
             </div>
@@ -64,22 +66,22 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./boardpicture/picturelist.php?page=1">
                             <div class="image-area">
                                 <img src="./images/zipper2.jpg">
                             </div>
                             <div class="comment-area">
-                                <p>익명게시판</p>
+                                <p>사진게시판</p>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./boardmarket/marketlist.php?page=1">
                             <div class="image-area">
                                 <img src="./images/news.png">
                             </div>
                             <div class="comment-area">
-                                <p>오늘의 토픽</p>
+                                <p>장터게시판</p>
                             </div>
                         </a>
                     </li>
@@ -93,17 +95,17 @@
                                 <img src="./images/writing.jpg">
                             </div>
                             <div class="comment-area">
-                                <p>한마디 게시판</p>
+                                <p>첫인사게시판</p>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./boarduser/boarduser.php">
                             <div class="image-area">
                                 <img src="./images/siren.jpg">
                             </div>
                             <div class="comment-area">
-                                <p>고발게시판</p>
+                                <p>정보수정</p>
                             </div>
                         </a>
                     </li>
@@ -123,13 +125,13 @@
     </nav>
     <div class="boards">
         <div class="board_board">
-            <div class="boardFree_form">
-                <div class="boardFree_title">자유게시판</div>
-                <div class="boardFree_list">
+            <div class="board_form">
+                <div class="board_form_title">자유게시판</div>
+                <div class="board_form_list">
                     <ul>
-                        <li class="boardFree_list1">내용</li>
-                        <li class="boardFree_list2">글쓴이</li>
-                        <li class="boardFree_list3">일자</li>
+                        <li class="board_list1">제목</li>
+                        <li class="board_list2">글쓴이</li>
+                        <li class="board_list3">일자</li>
                     </ul>
                 </div><!--boardFree_list-->
                 <?php
@@ -148,28 +150,32 @@
                         $result1 = mysqli_query($conn, $sqls);
                         $num_ripple = mysqli_num_rows($result1);
                     ?>
-                <div class="boardFree_list_data">
+                <div class="board_list_data">
                     <ul>
-                        <li class="boardFree_list_data1"><a href="./boardFree/view.php?num=<?=$boardFree_num?>&page=1"><?=$boardFree_subject?></a>
+                        <li class="board_list_data1"><a href="./boardFree/view.php?num=<?=$boardFree_num?>&page=1"><?=$boardFree_subject?></a>
                         <?php
                             if($num_ripple) print "[<font color=red><b>$num_ripple</b></font>]";
                         ?>
                         </li>
-                        <li class="boardFree_list_data2"><?=$boardFree_nickname?></li>
-                        <li class="boardFree_list_data3"><?=$boardFree_date?></li>
+                        <li class="board_list_data2"><a href="./boardFree/view.php?num=<?=$boardFree_num?>&page=1"><?=$boardFree_nickname?></a></li>
+                        <li class="board_list_data3"><a href="./boardFree/view.php?num=<?=$boardFree_num?>&page=1"><?=$boardFree_date?></a></li>
                     </ul>   
                 </div>
                 <?php
                     }
                 ?>
-            </div><!--boardFree_form-->
+            </div><!--board_form-->
+        </div><!--board_board-->
+    </div><!--boards-->
+    <div class="boards">
+        <div class="board_board">
             <div class="board_boardform">
-                <div class="board_board_title">첫인사게시판</div>
-                <div class="board_board_list">
+                <div class="board_form_title">첫인사게시판</div>
+                <div class="board_form_list">
                     <ul>
-                        <li class="board_board_list1">내용</li>
-                        <li class="board_board_list2">글쓴이</li>
-                        <li class="board_board_list3">일자</li>
+                        <li class="board_list1">내용</li>
+                        <li class="board_list2">글쓴이</li>
+                        <li class="board_list3">일자</li>
                     </ul>
                 </div><!--board_board_list-->
                 <?php
@@ -183,24 +189,104 @@
                         $board_date = substr($boardFree_date, 0, 10);
                         $board_num = $rows['num'];
                 ?>
-                <div class="board_board_list_data">
+                <div class="board_list_data">
                     <ul>
-                        <li class="board_board_data1"><a href="./board/board_free.php?page=1"><?=$board_content?></a></li>
-                        <li class="board_board_data2"><?=$board_nickname?></li>
-                        <li class="board_board_data3"><?=$board_date?></li>
+                        <li class="board_list_data1"><a href="./board/board_free.php?page=1"><?=$board_content?></a></li>
+                        <li class="board_list_data2"><a href="./board/board_free.php?page=1"><?=$board_content?><?=$board_nickname?></a></li>
+                        <li class="board_list_data3"><a href="./board/board_free.php?page=1"><?=$board_content?><?=$board_date?></a></li>
                     </ul>
                 </div><!--board_board_list_data-->
                 <?php
                     }
                 ?>
-            </div><!--board_boardform-->
-        </div><!--boardFree_board-->
+            </div><!--board_form-->
+        </div><!--board_board-->
+    </div><!--boards-->
+    <div class="boards">
+        <div class="board_board">
+            <div class="board_form">
+                <div class="board_form_title">사진게시판</div>
+                <div class="board_form_list">
+                    <ul>
+                        <li class="board_list1">제목</li>
+                        <li class="board_list2">글쓴이</li>
+                        <li class="board_list3">일자</li>
+                    </ul>
+                </div><!--boardFree_list-->
+                <?php
+
+                    $sqle = 'select * from picture order by num desc limit 0, 5';
+                    $resulte = mysqli_query($conn, $sqle);
+
+                    while($rowe = mysqli_fetch_array($resulte)){
+                        $picture_subject = $rowe['subject'];
+                        $picture_nickname = $rowe['nickname'];
+                        $picture_date = $rowe['regist_day'];
+                        $picture_date = substr($picture_date, 0, 10);
+                        $piecture_num = $rowe['num'];
+                    ?>
+                <div class="board_list_data">
+                    <ul>
+                        <li class="board_list_data1"><a href="./boardpicture/picturelist.php?num=<?=$picture_num?>&page=1"><?=$picture_subject?></a></li>
+                        <li class="board_list_data2"><a href="./boardpicture/picturelist.php?num=<?=$picture_num?>&page=1"><?=$picture_nickname?></a></li>
+                        <li class="board_list_data3"><a href="./boardpicture/picturelist.php?num=<?=$picture_num?>&page=1"><?=$picture_date?></a></li>
+                    </ul>   
+                </div>
+                <?php
+                    }
+                ?>
+            </div><!--board_form-->
+        </div><!--board_board-->
+    </div><!--boards-->
+    <div class="boards">
+        <div class="board_board">
+            <div class="board_form">
+                <div class="board_form_title">장터게시판</div>
+                <div class="board_form_list">
+                    <ul>
+                        <li class="board_list1">제목</li>
+                        <li class="board_list2">글쓴이</li>
+                        <li class="board_list3">일자</li>
+                    </ul>
+                </div><!--boardFree_list-->
+                <?php
+
+                    $sqlv = 'select * from market order by num desc limit 0, 5';
+                    $resultv = mysqli_query($conn, $sqlv);
+
+                    while($rowv = mysqli_fetch_array($resultv)){
+                        $market_subject = $rowv['subject'];
+                        $market_nickname = $rowv['nickname'];
+                        $market_date = $rowv['regist_day'];
+                        $market_date = substr($market_date, 0, 10);
+                        $market_num = $rowv['num'];
+
+                        $sqlvs = "select * from market_ripple where parent=$market_num";
+                        $resultvs = mysqli_query($conn, $sqlvs);
+                        $num_rippless = mysqli_num_rows($resultvs);
+                    ?>
+                <div class="board_list_data">
+                    <ul>
+                        <li class="board_list_data1"><a href="./boardmarket/marketview.php?num=<?=$market_num?>&page=1"><?=$market_subject?></a>
+                        <?php
+                            if($num_rippless) print "[<font color=red><b>$num_rippless</b></font>]";
+                        ?>
+                        </li>
+                        <li class="board_list_data2"><a href="./boardmarket/marketview.php?num=<?=$market_num?>&page=1"><?=$market_nickname?></a></li>
+                        <li class="board_list_data3"><a href="./boardmarket/marketview.php?num=<?=$market_num?>&page=1"><?=$market_date?></a></li>
+                    </ul>   
+                </div>
+                <?php
+                    }
+                ?>
+            </div><!--board_form-->
+        </div><!--board_board-->
     </div><!--boards-->
     <section>
         <div class="slide">
             <div class="slide-menubar">
                 <div class="slide-title">오늘의 뉴스</div>
-                <div class="slide-click"><a href="#">게시글 가기<i class="fas fa-chevron-circle-right"></i></a></div>
+                <div class="slide-click"><a href="./boardFree/list.php?page=1">게시글 가기<i class="fas fa-chevron-circle-right"></i></a></div>
             </div>
             <div class="slide-images">
                 <div class="slide-left">

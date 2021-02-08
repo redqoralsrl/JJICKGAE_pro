@@ -8,7 +8,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #f4f5f6;;
 }
 /* header 부분 */
 header{
@@ -217,8 +217,8 @@ nav{
     width: 100%;
     font-size: 15px;
     text-align: center;
-    background-color: #09005c;
-    color: #ffffff;
+    
+    color: #000000;
 }
 .write_form{
     width: 100%;
@@ -230,8 +230,8 @@ nav{
     justify-content: start;
 }
 #col1{
-    background-color: #09005c;
-    color: #ffffff;
+   
+    color: #000000;
     width: 10%;
 }
 #col2{
@@ -253,8 +253,8 @@ nav{
 }
 .col1s{
     width: 10%;
-    background-color: #09005c;
-    color: #ffffff;
+    
+    color: #000000;
 }
 .col2s{
     width: 90%;
@@ -262,7 +262,9 @@ nav{
 .col2s textarea{
     width: 720px;
     height: 23px;
+    font-weight: 9px;
 }
+
 .write_row3{
     width: 100%;
     height: 230px;
@@ -273,8 +275,8 @@ nav{
 .col3s{
     width: 10%;
     height: 100%;
-    background-color: #09005c;
-    color: #ffffff;
+   
+    color: #000000;
 }
 .col4s{
     width: 90%;
@@ -293,30 +295,31 @@ nav{
     font-weight: bolder;
     border: 0;
     width: 40px;
-    height: 18px;
+    height: 20px;
     border-radius: 20px;
-    background-color: #09005c;
-    color: #ffffff;
+    border: 1px solid #5c5c5c;
+    color: #000000;
     margin-top: 1px;
     margin-right: 8px;
+    cursor: pointer;
 }
 .write_button input:hover{
-    background-color: #1c02ff;
+    background-color: #FFEBF0;
 }
 .write_button a{
     font-size: 14px;
     text-align: center;
     border: 0;
     width: 40px;
-    height: 18px;
+    height: 20px;
     border-radius: 20px;
-    background-color: #09005c;
-    color: #ffffff;
+    color: #000000;
     margin-top: 1px;
     margin-right: 8px;
+    border: 1px solid #5c5c5c;
 }
 .write_button a:hover{
-    background-color: #1c02ff;
+    background-color: #FFEBF0;
 }
 @media screen and (max-width: 1024px){
     /* header 부분 */

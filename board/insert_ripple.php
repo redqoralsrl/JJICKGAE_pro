@@ -1,8 +1,6 @@
 <?php
     session_start();
-?>
-<meta charset="utf-8">
-<?php
+    
     if(!isset($_SESSION['id'])){
         ?>
         <script>
@@ -11,12 +9,9 @@
         </script>
 <?php
     }
-
-    // $content = $_REQUEST['content'];
-    $page = $_GET['page'];
-
-
     include '../sql_function.php';
+
+    $page = $_GET['page'];
 
     $num = $_REQUEST['num'];
     $content = mysqli_real_escape_string($conn, $_REQUEST['ripple_content']);
@@ -31,7 +26,6 @@
 
     $result = mysqli_query($conn, $sql);
     
-    // header("Location: ../board/board_free.php?page=$page")
 ?>
 <script>
     location.replace('../board/board_free.php?page=<?=$page?>');

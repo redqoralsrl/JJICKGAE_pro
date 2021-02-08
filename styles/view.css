@@ -7,10 +7,7 @@ a{
     color: #000000;
     font-family : 'Noto Sans KR', sans-serif;
 }
-body{
-    /* e9f8ff */
-    background-color: #eef9ff;
-}
+
 /* header 부분 */
 header{
     border-bottom: 2px solid #09005c;
@@ -101,6 +98,7 @@ button{
 /* col2 */
 .colbody{
     width: 100%;
+    padding-top: 30px;
 }
 .col2{
     width: 1000px;
@@ -110,8 +108,8 @@ button{
 }
 .title{
     width: 100%;
-    background-color: #09005c;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
     font-weight: bolder;
     font-size: 15px;
@@ -119,24 +117,23 @@ button{
 }
 .line_s{
     width: 998px;
-    border: 1px solid #5c5c5c;
+    border: 1px solid #c8c8c8;
 }
 .title_bars{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 .title_names{
     width: 20%;
-    background-color: #09005c;
-    color: #ffffff;
     text-align: center;
     font-weight: bolder;
     font-size: 15px;
 }
 .view_title1{
     width: 80%;
-    text-align: center;
+    text-align: left;
     font-weight: bolder;
     font-size: 15px;
 }
@@ -152,14 +149,11 @@ button{
 }
 .view_content{
     width: 100%;
-    display: flex;
-    justify-content: center;
     height: 200px;
 }
 .content_view{
     width: 20%;
-    background-color: #09005c;
-    color: #ffffff;
+  
     font-weight: bolder;
     font-size: 15px;
     text-align: center;
@@ -204,8 +198,7 @@ button{
     width: 100%;
     font-weight: bolder;
     font-size: 15px;
-    background-color: #09005c;
-    color: #ffffff;
+   
     height: 50px;
 }
 .ripple_box textarea{
@@ -220,8 +213,7 @@ button{
     height: 30px;
 }
 .ripple_box3 input{
-    background-color: #09005c;
-    color: #ffffff;
+   
     border-radius: 10px;
     height: 30px;
     width: 80px;
@@ -229,20 +221,32 @@ button{
     font-weight: bolder;
 }
 .view_button{
-    width: 50px;
-    background-color: #09005c;
-    float: right;
+    
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
+    display: inline-block;
 }
 .view_button a{
     border-radius: 10px;
     font-weight: bolder;
     font-size: 15px;
     border-radius: 10px;
-    color: #ffffff;
+    
+  
 }
+
+.img_view img{
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* 게시글 view 부분 */
+
+
+
+
 @media screen and (max-width: 1024px){
     /* header 부분 */
     .header-bar{

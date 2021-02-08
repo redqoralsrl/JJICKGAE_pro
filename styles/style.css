@@ -22,7 +22,7 @@ header{
     background-color: #ffffff;
     padding: 8px 12px;
 }
-.header-bar-logo img{
+.header-    ar-logo img{
     width: 200px;
 }
 .search-main{
@@ -215,6 +215,7 @@ nav{
     text-align: left;
     font-size: 15px;
     font-weight: bolder;
+    
 }
 .boardFree_list{
     width: 100%;
@@ -224,10 +225,14 @@ nav{
     justify-content: flex-start;
     width: 100%;
     list-style: none;
+  
+
 }
 .boardFree_list1{
     width: 60%;
+  
 }
+
 .boardFree_list2{
     width: 15%;
 }
@@ -242,9 +247,21 @@ nav{
     justify-content: flex-start;
     width: 100%;
     list-style: none;
+   
 }
 .boardFree_list_data1{
     width: 60%;
+    
+}
+.boardFree_list_data1 a{
+    color: #1a0dab;
+    font-size: 16px;
+    text-decoration: underline;
+    width        : 160px;     /* 너비는 변경될수 있습니다. */
+    text-overflow: ellipsis;  /* 위에 설정한 100px 보다 길면 말줄임표처럼 표시합니다. */
+    white-space  : nowrap;    /* 줄바꿈을 하지 않습니다. */
+    overflow     : hidden;    /* 내용이 길면 감춤니다 */
+     
 }
 .boardFree_list_data2{
     width: 15%;
@@ -449,6 +466,11 @@ section{
 .one-right img:hover{
     box-shadow: 2px 2px 2px 1px #000000;
 }
+/* main page board list */
+
+
+
+
 /* footer */
 
 footer{

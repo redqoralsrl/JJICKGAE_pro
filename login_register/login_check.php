@@ -20,6 +20,9 @@
             alert('Hi Administrator!');
         </script>
         <?php
+        $_SESSION['id'] = $result['id'];
+        $_SESSION['name'] = $result['name'];
+        $_SESSION['nickname'] = $result['nickname'];
         header("Location: ../admin/admin.php?id=".$id);
     }else{
         if($result === null){
@@ -39,6 +42,7 @@
                         $_SESSION['id'] = $result['id'];
                         $_SESSION['name'] = $result['name'];
                         $_SESSION['nickname'] = $result['nickname'];
+                        $_SESSION['pw'] = $result['pw'];
                         header("location: ../index_result.php?id=".$id);
                     ?>
                     </script>

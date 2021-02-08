@@ -1,7 +1,6 @@
 <?php
     session_start();
 ?>
-<meta charset="utf-8">
 <?php
     if(!isset($_SESSION['id'])){
         ?>

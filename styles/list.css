@@ -8,7 +8,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #f4f5f6;
 }
 /* header 부분 */
 header{
@@ -297,6 +297,12 @@ nav{
     font-weight: bolder;
     cursor: pointer;
 }
+.list_content img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
 
 @media screen and (max-width: 1024px){
     /* header 부분 */
