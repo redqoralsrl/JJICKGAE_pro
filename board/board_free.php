@@ -137,8 +137,8 @@
                 <?php
                     if(isset($_SESSION['id'])){
                 ?>
-                    <form action="../board/insert_ripple.php?page=<?=$page?>&num=<?=$board_free_num?>" action="post">
-                    <!-- <input type="hidden" name="num" value="<?=$board_free_num?>"> -->
+                    <form action="../board/insert_ripple.php?page=<?=$page?>" action="post">
+                    <input type="hidden" name="num" value="<?=$board_free_num?>">
                     <div class="ripple_insert">
                         <div class="ripple_textarea">
                             <textarea name="ripple_content" rows="1" placeholder="댓글을 작성해주세요!" required></textarea>

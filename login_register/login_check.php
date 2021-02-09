@@ -14,7 +14,7 @@
 
     $result = mysqli_query($conn,$sql);
     $result = mysqli_fetch_array($result);
-    if($id === 'admin' && $pw === '1234'){
+    if($id === 'admin' && $pw === '123456'){
         ?>
         <script>
             alert('Hi Administrator!');

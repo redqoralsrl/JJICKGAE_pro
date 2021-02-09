@@ -131,7 +131,7 @@
                 <?php
                     if(isset($_SESSION['id'])){
                         if($_SESSION['id'] == 'admin' || $_SESSION['id'] == $ripple_id){
-                            print "<a href=delete_ripple.php?num=$item_num&ripple_num=$ripple_num&page=<?=$page?>>[삭제]</a>";
+                            print "<a href=delete_ripple.php?num=$item_num&ripple_num=$ripple_num&page=$page>[삭제]</a>";
                         }
                     }
                     ?>

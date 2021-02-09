@@ -62,7 +62,7 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- css -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/search_html.css">
     <!-- fontawesome 링크 -->
     <script src="https://kit.fontawesome.com/47be955b75.js" crossorigin="anonymous"></script>
     <!-- jQuery 링크 -->
