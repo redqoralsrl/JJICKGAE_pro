@@ -169,7 +169,7 @@
     </div><!--boards-->
     <div class="boards">
         <div class="board_board">
-            <div class="board_boardform">
+            <div class="board_form">
                 <div class="board_form_title">첫인사게시판</div>
                 <div class="board_form_list">
                     <ul>
@@ -192,8 +192,8 @@
                 <div class="board_list_data">
                     <ul>
                         <li class="board_list_data1"><a href="./board/board_free.php?page=1"><?=$board_content?></a></li>
-                        <li class="board_list_data2"><a href="./board/board_free.php?page=1"><?=$board_content?><?=$board_nickname?></a></li>
-                        <li class="board_list_data3"><a href="./board/board_free.php?page=1"><?=$board_content?><?=$board_date?></a></li>
+                        <li class="board_list_data2"><a href="./board/board_free.php?page=1"><?=$board_nickname?></a></li>
+                        <li class="board_list_data3"><a href="./board/board_free.php?page=1"><?=$board_date?></a></li>
                     </ul>
                 </div><!--board_board_list_data-->
                 <?php

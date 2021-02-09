@@ -83,6 +83,7 @@
         ";
 
         $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
         $cot = 1;
         $cot = $total_article - ($view_article * ($page - 1));
 
@@ -94,15 +95,18 @@
     <div class="title_list_look">
         <div class="container_body">
         <div class="title">사진게시판</div>
-            <div class="wirte_line"></div>
-            <ul>
-                <li class="list1">글번호</li>
-                <li class="list3">작성자</li>
-                <li class="list4">제목</li>
-                <li class="list6">이미지</li>
-                <li class="list7">날짜</li>
-            </ul>
-        
+            <div class="write_line"></div>
+            <div class="list_top_title">
+                <ul>
+                    <li class="list1">글번호</li>
+                    <li class="list2">작성자</li>
+                    <li class="list3">제목</li>
+                    <li class="list4">이미지</li>
+                    <li class="list5">날짜</li>
+                </ul>
+            </div>
+        </div>
+        <div class="write_line"></div>
         <?php
         $i = $count;
 

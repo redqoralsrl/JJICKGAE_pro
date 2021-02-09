@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <!-- css -->
-    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="../styles/pictureview.css">
     <!-- jQuery 링크 -->
     <script src="../scripts/jQueryFile/jQuery/jquery-3.5.1.js"></script>
 </head>
@@ -86,19 +86,20 @@
                 <div class="img_content"><?=$row['nickname']?></div>
                 <div class="img_srcs"><img src="<?=$row['file_path']?>"></div>
             </div><!--comment_bar-->
-        </div><!--bodys_inside-->
-        <div class="button_lists">
+            <div class="button_lists">
             <ul>
-                <li class="button_list_list"><a href="../boardpicture/picturelist.php?page=<?=$page?>">목록</a></li>
+                <li class="button_list_list"><a href="../boardpicture/picturelist.php?page=<?=$page?>">[목록]</a></li>
                 <?php
                     if(isset($_SESSION['id'])){
                         if($_SESSION['id'] == 'admin' || $_SESSION['id'] == $row['id']){
-                            print "<a href=../boardpicture/picturedelete.php?num=$num&page=<?=$page?>>[삭제]</a>";
+                            print "<a href=../boardpicture/picturedelete.php?num=$num&page=$page>[삭제]</a>";
                         }
                     }
                     ?>
             </ul>
         </div>
+        </div><!--bodys_inside-->
+        
     </div><!--bodys-->
 </body>
 </html>

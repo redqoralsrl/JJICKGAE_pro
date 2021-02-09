@@ -24,7 +24,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <!-- css -->
-    <link rel="stylesheet" href="../styles/view.css">
+    <link rel="stylesheet" href="../styles/marketwrite.css">
     <!-- jQuery 링크 -->
     <script src="../scripts/jQueryFile/jQuery/jquery-3.5.1.js"></script>
 </head>

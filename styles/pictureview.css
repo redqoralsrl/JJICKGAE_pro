@@ -230,8 +230,8 @@ nav{
 }
 
 .img_srcs img{
-    width: 1200px;
-    height: 1200px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
 }
 

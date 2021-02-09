@@ -9,7 +9,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #ffffff;
 }
 /* header 부분 */
 header{
@@ -22,7 +22,7 @@ header{
     background-color: #ffffff;
     padding: 8px 12px;
 }
-.header-    ar-logo img{
+.headerar-logo img{
     width: 200px;
 }
 .search-main{
@@ -98,7 +98,76 @@ button{
 .menu-list-board ul li a:hover{
     color:#1c02ff;
 }
-
+/* section 부분 */
+.write_line{
+    width: 100%;
+    height: 20px;
+}
+.content_box{
+    width: 100%;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 10px;
+}
+.notice_board{
+    width: 80%;
+    margin: 0 auto;
+}
+.content_title{
+    width: 80%;
+    margin: 0 auto;
+}
+.serach_result1{
+    width: 80%;
+    margin: 5px auto;
+}
+.results ul{
+    list-style: none;
+}
+.list1{
+    width: 100%;
+}
+.list1 a{
+    text-decoration: underline;
+    color: #1c02ff;
+}
+.list1_1 a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: lighter;
+}
+.list2 a{
+    color: #28c263;;
+}
+.list3 a{
+    color: #7c7c7c;
+}
+.list2{
+    width : 20%;
+    float: left;
+}
+.list3{
+    width: 80%;
+    float: right;
+}
+/* top 메뉴 버튼 */
+#back-to-top{
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    box-shadow: 3px 3px 3px #000000;
+    border-radius: 20px;
+    background-color: #ffffff;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    color: #000000;
+    font-weight: bolder;
+    opacity: 0;
+}
+#back-to-top.visible{
+    opacity: 1;
+}
 @media screen and (max-width: 1024px){
     /* header 부분 */
     .header-bar{

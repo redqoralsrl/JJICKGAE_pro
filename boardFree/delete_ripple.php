@@ -4,7 +4,7 @@
 
     include '../sql_function.php';
     $sql = "
-        delete from board_free_ripple where num='$ripple_num'
+        delete from greet_ripple where num='$ripple_num'
     ";
 
     $page = $_GET['page'];

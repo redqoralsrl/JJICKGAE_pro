@@ -27,15 +27,17 @@
     $name = $_SESSION['name'];
     $nickname = $_SESSION['nickname'];
 
+    $page = $_GET['page'];
+
     if($mode == 'modify'){
 
-        $sql = "update greet set subject='$subject', content='$content', is_html='$is_html' where num='$num'";
+        $sql = "update greet set content='$content', is_html='$is_html' where num='$num'";
         $result = mysqli_query($conn,$sql);
 
         // header("Location : ../boardFree/list.php?page=$page");
         ?>
         <script>
-        location.replace('../boardFree/list.php?page=<?=$page?>');
+            location.replace('../boardFree/list.php?page=<?=$page?>');
         </script>
         <?php
     }else{
@@ -51,8 +53,6 @@
             value('$id','$name','$nickname','$subject','$content',now(),0,'$is_html')";
 
     $result = mysqli_query($conn, $sql);
-
-    $page = $_GET['page'];
 
     // header("Location : ../boardFree/list.php?page=$page");   
 ?>

@@ -18,7 +18,7 @@
 
     $file_path = '../data/'.$file_name;
 
-    $r = move_uploaded_file($tmp_file, $file_path);
+    $r = move_uploaded_file($tmp_file, iconv("UTF-8","cp949",$file_path));
 
     $subject=$_REQUEST["subject"];
     $content=$_REQUEST["content"];

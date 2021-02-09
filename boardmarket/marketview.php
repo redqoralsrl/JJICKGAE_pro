@@ -80,7 +80,7 @@
             <div class="title">장터게시판</div>
             <div class="line_s"></div>
             <div class="title_bars">
-                <div class="title_names">제목</div>
+                <div class="title_names"></div>
                 <div class="view_title1"><?=$item_subject?></div>
             </div>
             <div class="line_s"></div>

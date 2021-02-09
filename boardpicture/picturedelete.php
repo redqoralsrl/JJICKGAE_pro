@@ -32,5 +32,5 @@
 
 ?>
 <script>
-    location.replace('../boardFree/picturelist.php?page=<?=$page?>');
+    location.replace('../boardpicture/picturelist.php?page=<?=$page?>');
 </script>

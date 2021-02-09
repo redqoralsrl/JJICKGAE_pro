@@ -9,7 +9,7 @@ a{
 }
 body{
     /* e9f8ff */
-    background-color: #eef9ff;
+    background-color: #f4f5f6;
 }
 /* header 부분 */
 header{
@@ -199,6 +199,7 @@ nav{
 /* boardFree_board */
 .boards{
     width: 100%;
+    list-style: none;
 }
 .board_board{
     width: 1000px;
@@ -206,8 +207,13 @@ nav{
     display: flex;
     margin: 0 auto;
 }
+.board_form_title{
+    text-align: left;
+    padding-left: 15px;
+    font-size: 12px;
+}
 .boardFree_form{
-    width: 49.5%;
+    width: 100%;
     background-color: #ffffff;
     border-radius: 20px;
 }
@@ -215,18 +221,20 @@ nav{
     text-align: left;
     font-size: 15px;
     font-weight: bolder;
-    
+    list-style: none;
 }
 .boardFree_list{
     width: 100%;
+    
+    
 }
-.boardFree_list ul{
+
+.board_form_list ul{
     display: flex;
     justify-content: flex-start;
     width: 100%;
     list-style: none;
   
-
 }
 .boardFree_list1{
     width: 60%;
@@ -270,7 +278,7 @@ nav{
     width: 25%;
 }
 .board_boardform{
-    width: 49.5%;
+    width: 100%;
     background-color: #ffffff;
     border-radius: 20px;
 }
@@ -307,15 +315,54 @@ nav{
     width: 100%;
     list-style: none;
 }
-.board_board_data1{
-    width: 50%;
+.board_list_data li{
+    list-style: none;
 }
-.board_board_data2{
-    width: 20%;
+.board_form{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
 }
-.board_board_data3{
+
+
+.board_list1{
+    width: 40%;
+}
+.board_list2{
     width: 30%;
 }
+.board_list3{
+    width: 30%;
+}
+
+.board_list_data li{    
+    display: inline-block;
+    
+
+}
+
+.board_list_data1{
+    width: 40%;
+    text-align: left;
+
+}
+.board_list_data2{
+    width: 20%;
+    text-align: start;
+}
+.board_list_data3{
+    width: 20%;
+    text-align: right;
+}
+.board_list_data1 a{
+    color:#1a0dab;
+    
+}
+.write_line{
+    width: 100%;
+    border: 1px solid #5c5c5c;
+}
+
 /* section 부분 */
 section{
     width: 100%;

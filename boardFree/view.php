@@ -156,7 +156,7 @@
                     if(isset($_SESSION['id'])){
                         if($_SESSION['id'] == $item_id || $_SESSION['id'] == "admin"){
                 ?>
-                            <a href="../boardFree/modify_form.php?num=<?=$num?>&page=<?=$page?>">수정</a>&nbsp;
+                            
                             <a href="../boardFree/delete.php?num=<?=$num?>&page=<?=$page?>">삭제</a>&nbsp;
                 <?php
                         }

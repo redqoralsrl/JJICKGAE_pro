@@ -34,10 +34,10 @@
         
                         
                         <div class="find-info">
-                            <a href="">아이디 찾기 </a>
+                            <a href="#">아이디 찾기 </a>
                             <span class="bar" id=idinquiry>|</span>
 
-                            <a href="" id = "pwinquiry">비밀번호 찾기</a>
+                            <a href="#" id = "pwinquiry">비밀번호 찾기</a>
 
                             <span class="bar" id=join>|</span>
 

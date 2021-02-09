@@ -14,60 +14,58 @@
 
     $sql = "select * from userdata where id='$id'";
     $result = mysqli_query($conn, $sql);
-    if(isset($result)){
-            ?>
-            <script>
-                alert('Use Another ID!');
-                history.back();
-            </script>
-            <?php
-    }else{
-        $sql = "select * from userdata where nickname='$nickname'";
+    $count = mysqli_num_rows($result);
+
+    if($count == 0){
+        $sql = "select * from userdata where nickname='$nickName'";
         $result = mysqli_query($conn, $sql);
-        if(isset($result)){
-            ?>
-            <script>
-                alert('Use Another Nickname!');
-                history.back();
-            </script>
-            <?php
-        }else{
+        $count = mysqli_num_rows($result);
+        if($count == 0){
             $sql = "select * from userdata where email='$email'";
             $result = mysqli_query($conn, $sql);
-            if(isset($result)){
-                ?>
-                <script>
-                    alert('Use Another Email!');
-                    history.back();
-                </script>
-                <?php
-            }else{
-                if($pw != $pw2){
-                ?>
-                <script>
-                    alert('Wrong Password!');
-                    history.back();
-                </script>
-                <?php
-                }else{
-                        $sql = "
+            $count = mysqli_num_rows($result);
+            if($count == 0){
+                if($pw == $pw2){
+                    $sql = "
                         INSERT INTO userdata(id, name, pw, nickname, email)
                         VALUE('$id','$name','$pw','$nickName', '$email')
                     ";
-                
+
                     $result = mysqli_query($conn, $sql);
 
+                    header("location:../index.php");
+                }else{
                     ?>
                     <script>
-                        alert('Login Success!');
+                        alert('Password Not Corret for pw1, pw2');
                         history.back();
                     </script>
                     <?php
-
-                    header("location:../index.php");
                 }
+            }else{
+                ?>
+                <script>
+                    alert('Use Other Email');
+                    history.back();
+                </script>
+                <?php
             }
+        }else{
+            ?>
+            <script>
+                alert('Use Other NickName');
+                history.back();
+            </script>
+            <?php
         }
-
+    }else{
+        ?>
+        <script>
+            alert('Use Other ID');
+            history.back();
+        </script>
+        <?php
     }
+
+    
 ?>

@@ -113,8 +113,8 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_reg?></a></li>
+                    <li class="list2"><a href="./board/board_free.php?page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./board/board_free.php?page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -135,9 +135,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -158,9 +158,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -181,9 +181,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -192,7 +192,8 @@
             ?>
         </div><!--search_result1-->
     </div><!--content_box-->
-    <div class="subject_box">
+    <div class="write_line"></div>
+    <div class="content_box">
         <div class="content_title">제목 검색 결과 ▼</div>
         <div class="serach_result1">
             <?php
@@ -207,9 +208,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -230,9 +231,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -253,9 +254,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -263,8 +264,9 @@
             }
             ?>
         </div><!--search_result1-->
-    </div><!--subject_box-->
-    <div class="nickname_box">
+    </div><!--content_box-->
+    <div class="write_line"></div>
+    <div class="content_box">
         <div class="content_title">닉네임 검색 결과 ▼</div>
         <div class="serach_result1">
             <?php
@@ -277,8 +279,8 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./board/board_free.php?page=1"><?=$first_reg?></a></li>
+                    <li class="list2"><a href="./board/board_free.php?page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./board/board_free.php?page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -299,9 +301,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardFree/view.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -322,9 +324,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardpicture/pictureview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -345,9 +347,9 @@
             <div class="results">
                 <ul>
                     <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_subject?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
-                    <li class="list1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
+                    <li class="list1_1"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_content?></a></li>
+                    <li class="list2"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_nickname?></a></li>
+                    <li class="list3"><a href="./boardmarket/marketview.php?num=<?=$first_num?>&page=1"><?=$first_reg?></a></li>
                 </ul>
             </div>
             <?php
@@ -355,7 +357,7 @@
             }
             ?>
         </div><!--search_result1-->
-    </div><!--nickname_box-->
+    </div><!--content_box-->
     <!-- 돌아가기 메뉴 -->
     <div>
         <a  id="back-to-top" href="#">Top</a>
